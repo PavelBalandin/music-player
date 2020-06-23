@@ -25,18 +25,12 @@
         props: ['music', 'seek'],
         name: "Music-info",
 
-        data() {
-            return {
-                // seek: 0
-            }
-        },
-
         filters: {
             minutes(value) {
-                var seconds =''
-                if((parseInt(value) % 60) % 10 < 10 && parseInt(value) % 60 <10){
-                    seconds =   '0' + parseInt(value) % 60
-                }else{
+                var seconds = ''
+                if ((parseInt(value) % 60) % 10 < 10 && parseInt(value) % 60 < 10) {
+                    seconds = '0' + parseInt(value) % 60
+                } else {
                     seconds = parseInt(value) % 60
                 }
 
@@ -65,7 +59,7 @@
         font-size: 26px;
     }
 
-    .title{
+    .title {
         width: 30%;
     }
 
@@ -74,12 +68,12 @@
         color: white;
     }
 
-    .title-music{
+    .title-music {
         opacity: 0.9;
         color: white;
     }
 
-    .title-time{
+    .title-time {
         font-size: 20px;
         opacity: 0.85;
     }

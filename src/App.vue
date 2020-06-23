@@ -5,7 +5,6 @@
                 v-bind:music="this.playlist[index]"
                 v-bind:seek="this.seek"
                 v-on:change_current_time="change_current_time"
-
         />
         <Controls
                 v-on:change-volume="changevolume"
@@ -13,8 +12,6 @@
                 v-on:previous_track="previous_track"
                 v-on:next_track="next_track"
                 v-bind:isplay="isplay"
-
-
         />
         <MusicList
                 v-bind:playlist="filtered"
@@ -24,7 +21,7 @@
                 v-bind:id="index"
         />
         <Search
-            v-on:apply_filter="apply_filter"
+                v-on:apply_filter="apply_filter"
         />
     </div>
 </template>
@@ -93,15 +90,12 @@
                     },
 
                 ],
-
                 index: 0,
                 previndex: 0,
                 isplay: false,
                 volume_level: 0.5,
                 seek: 0,
                 filter: '',
-
-
             }
         },
 
@@ -126,11 +120,11 @@
 
 
         },
-        computed:{
-            filtered(){
-                if (this.filter === ''){
+        computed: {
+            filtered() {
+                if (this.filter === '') {
                     return this.playlist
-                }else {
+                } else {
                     return this.playlist.filter(t => t.title == this.filter);
                 }
 
@@ -138,7 +132,7 @@
         },
 
         methods: {
-            apply_filter(filter){
+            apply_filter(filter) {
                 this.filter = filter;
             },
 
@@ -163,7 +157,6 @@
                 this.previndex = this.index;
                 this.index = i;
                 this.current = this.playlist[this.index];
-                // this.MusicList.$refs('play_pause_icon', this.index);
                 if (this.isplay == false) {
                     this.current.audio.play();
                     this.current.audio.volume = this.volume_level;
@@ -198,7 +191,6 @@
                 }
             }
         },
-
 
         components: {
             Title,
@@ -242,14 +234,15 @@
         margin: 0;
     }
 
-    img{
+    img {
         opacity: 0.85;
     }
-    img:active{
+
+    img:active {
         padding-bottom: 3px;
     }
 
-    img:hover{
+    img:hover {
         opacity: 1;
     }
 </style>

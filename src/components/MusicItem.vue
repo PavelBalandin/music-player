@@ -128,10 +128,6 @@
         align-items: center;
     }
 
-    .music_itemon {
-        background-color: #424242 !important;
-    }
-
     .music-time {
         justify-content: flex-end
     }

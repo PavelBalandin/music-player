@@ -27,7 +27,6 @@
                 music: new Audio(require('@/audio/Warriyo - Mortals.mp3')),
                 icon_src: require('@/assets/play.png'),
                 icon_src_mute: require('@/assets/volumeon.png'),
-                //isplay: false,
                 volume: 50,
                 pre_volume: 50
             }
